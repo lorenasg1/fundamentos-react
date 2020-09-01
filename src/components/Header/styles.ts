@@ -17,11 +17,22 @@ export const Container = styled.div<ContainerProps>`
     justify-content: space-between;
 
     nav {
+      display: flex;
+
+      li {
+        list-style: none;
+
+        & + li {
+          margin-left: 3.1rem;
+        }
+      }
+
       a {
         color: #fff;
         text-decoration: none;
         font-size: 16px;
         transition: opacity 0.2s;
+        padding-bottom: 0.5rem;
 
         & + a {
           margin-left: 32px;
@@ -31,6 +42,9 @@ export const Container = styled.div<ContainerProps>`
           opacity: 0.6;
         }
       }
+    }
+    .selected {
+      border-bottom: 2px solid #ff872c;
     }
   }
 `;
